@@ -904,39 +904,3 @@ def process_txt_file(
         )
     
     print(f"\n🎉 تمام شد! {len(chunks_with_para)} اسلاید در {base_dir} ذخیره شد.")
-
-# ==============================
-# حلقه تست
-# ==============================
-if __name__ == "__main__":
-    txt_file = "science_quotes.txt"
-    
-    print("\n" + "="*60)
-    print("🧪 تست حالت خودکار (تقسیم بر اساس کلمات)")
-    print("="*60)
-    process_txt_file(
-        txt_file,
-        theme_name='Wine',
-        layout="image_left",
-        min_words=80,
-        max_words=100,
-        line_spacing_factor=1.3,
-        use_symbols=True,
-        manual_split=False
-    )
-    
-    print("\n" + "="*60)
-    print("🧪 تست حالت دستی (تقسیم بر اساس \\n\\n)")
-    print("="*60)
-    process_txt_file(
-        txt_file,
-        theme_name='Dark',
-        layout="image_left",
-        min_words=80,
-        max_words=100,
-        line_spacing_factor=1.3,
-        use_symbols=True,
-        manual_split=True
-    )
-    
-    print("\n✅ همه تست‌ها انجام شدند!")
